@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="button1">setUserID</string>
+    <string name="button2">setUserAttributes</string>
+    <string name="button3">ForceContentUpdate</string>
+    <string name="button4">setSenderID</string>
+    <string name="button5">Switch Login/Logout</string>
+    <string name="button6">Switch SenderID</string>
+    <string name="button7">Register for Push</string>
+</resources>
