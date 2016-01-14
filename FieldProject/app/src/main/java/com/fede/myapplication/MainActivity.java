@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
     public String newCustomSenderId = "222286048049";
 
     public boolean loggedIn;
-    public boolean leanplumPush;
+    public boolean leanplumPush = true;
 
     Map<String, Object> personAttributes = new HashMap<String, Object>();
     Map<String, Object> loginAttributes = new HashMap<String, Object>();
@@ -58,6 +58,7 @@ public class MainActivity extends Activity {
     }
 
     public void registerForPush(View view){
+        // Note - this is doing nothing at the moment since Registering for Push is not possible after Leanplum.Start
         if (leanplumPush){
             Log.i("### Leanplum", "Registering for Push Using Leanplum SenderID");
             LeanplumPushService.setGcmSenderId(LeanplumPushService.LEANPLUM_SENDER_ID);
@@ -91,7 +92,7 @@ public class MainActivity extends Activity {
         Log.i("### UserLoggedIn: ", String.valueOf(loggedIn));
         Log.i("### LeanplumPush?: ", String.valueOf(leanplumPush));
 
-//        LeanplumPushService.setGcmSenderId(LeanplumPushService.LEANPLUM_SENDER_ID);
+        LeanplumPushService.setGcmSenderId(LeanplumPushService.LEANPLUM_SENDER_ID);
 
         Leanplum.start(this);
 
