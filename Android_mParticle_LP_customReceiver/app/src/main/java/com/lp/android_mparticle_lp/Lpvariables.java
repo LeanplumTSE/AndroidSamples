@@ -1,6 +1,4 @@
 package com.lp.android_mparticle_lp;
-
-import com.leanplum.Var;
 import com.leanplum.annotations.Variable;
 
 import java.util.HashMap;

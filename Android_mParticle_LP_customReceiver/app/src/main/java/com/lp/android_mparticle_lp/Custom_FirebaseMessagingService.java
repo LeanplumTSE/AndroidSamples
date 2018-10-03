@@ -18,7 +18,6 @@ public class Custom_FirebaseMessagingService extends LeanplumPushFirebaseMessagi
 
         if (isLeanPlumPushNotification) {
             Log.i("### ", "LP notification: " + String.valueOf(isLeanPlumPushNotification));
-
             // Code to be executed in case of a Leanplum Notification
             // Calling 'onMessageReceived' from the parent class
             super.onMessageReceived(remoteMessage);
@@ -28,5 +27,4 @@ public class Custom_FirebaseMessagingService extends LeanplumPushFirebaseMessagi
             Log.i("##### ", "Not a LP notification");
         }
     }
-
 }

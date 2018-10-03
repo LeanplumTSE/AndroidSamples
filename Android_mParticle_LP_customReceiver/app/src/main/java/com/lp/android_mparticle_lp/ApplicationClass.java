@@ -1,7 +1,9 @@
 package com.lp.android_mparticle_lp;
 
 import android.app.Application;
+import android.app.Notification;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
@@ -41,7 +43,7 @@ public class ApplicationClass extends Application {
 //        }
 
         options = MParticleOptions.builder(this)
-                .credentials("<API_KEY>","<API_KEY_SECRET>")
+                .credentials("8358137317de2d40a186fd2c69b8c645","Mpy67u95yGxNN22XCuBItku4AxVnkbkDfuIUbB55CtWdrwU-VcGLpz8HupON3jME")
                 .build();
 
 
@@ -50,27 +52,24 @@ public class ApplicationClass extends Application {
         Parser.parseVariablesForClasses(Lpvariables.class);
 
         // Enabling Firebase
-        LeanplumPushService.enableFirebase();
+//        LeanplumPushService.enableFirebase();
 
         // Leanplum setCustomizer to, in this case, change the default small icon of the Push Notification
+
+
         LeanplumPushService.setCustomizer(new LeanplumPushNotificationCustomizer() {
             @Override
             public void customize(NotificationCompat.Builder builder, Bundle bundle) {
                 builder.setSmallIcon(R.drawable.androidbnw);
             }
-        });
 
-        // Leanplum Start callback
-        Leanplum.addStartResponseHandler(new StartCallback() {
             @Override
-            public void onResponse(boolean b) {
-                // Once Leanplum has started, following code will be executed
-                Log.i("### ", "Leanplum has started");
+            public void customize(Notification.Builder builder, Bundle bundle, @Nullable Notification.Style style) {
+
             }
         });
 
         // Starting MParticle - this will also start Leanplum
         MParticle.start(options);
-
     }
 }
