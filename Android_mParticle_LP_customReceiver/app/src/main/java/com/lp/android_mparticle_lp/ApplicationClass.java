@@ -30,20 +30,8 @@ public class ApplicationClass extends Application {
 
         // Example to explicitate the build type - Dev. vs Prod.
 
-//        if (BuildConfig.DEBUG) {
-//        options = MParticleOptions.builder(this)
-//                .credentials("8358137317de2d40a186fd2c69b8c645","Mpy67u95yGxNN22XCuBItku4AxVnkbkDfuIUbB55CtWdrwU-VcGLpz8HupON3jME")
-//                .environment(MParticle.Environment.Development)
-//                .build();
-//        } else {
-//            options = MParticleOptions.builder(this)
-//                    .credentials("8358137317de2d40a186fd2c69b8c645","Mpy67u95yGxNN22XCuBItku4AxVnkbkDfuIUbB55CtWdrwU-VcGLpz8HupON3jME")
-//                    .environment(MParticle.Environment.Production)
-//                    .build();
-//        }
-
         options = MParticleOptions.builder(this)
-                .credentials("8358137317de2d40a186fd2c69b8c645","Mpy67u95yGxNN22XCuBItku4AxVnkbkDfuIUbB55CtWdrwU-VcGLpz8HupON3jME")
+                .credentials("<mParticle_APP_KEY>","mParticle_CLient_Key")
                 .build();
 
 
